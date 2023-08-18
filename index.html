@@ -11,10 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Unicons Icons CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Slick Slider CDN -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Headline CSS -->
     <link rel="stylesheet" href="./plugins/headlines/headline.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="./plugins/magnific/magnific.css">
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/printPage.css">
 </head>
 
 <body>
@@ -25,7 +30,7 @@
                 PRINCE CV
             </div>
             <div>
-                <button>
+                <button id="print">
                     <i class="uil uil-print"></i>
                     Print
                 </button>
@@ -33,182 +38,315 @@
         </div>
     </nav>
 
-    <main class="container">
-        <section class="profile" id="ripples">
-            <div class="left">
-                <div class="avatar">
-                    <img src="./images/128x128.jpg" alt="">
-                    <span><i class="uil uil-comment-dots"></i></span>
-                </div>
-                <div>
-                    <h2>Prince</h2>
-                    <p class="cd-headline loading-bar">
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">Web Developer</b>
-                            <b>React Developer</b>
-                            <b>PHP Developer</b>
-                        </span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="right">
-                <ul class="contact">
-                    <li>
-                        <i class="uil uil-phone-volume"></i>
-                        <strong>Phone : </strong> +91 99102 54105
-                    </li>
-                    <li>
-                        <i class="uil uil-envelope"></i>
-                        <strong>Email : </strong> vs3031999@gmail.com
-                    </li>
-                </ul>
-                <ul class="socials">
-                    <li>
-                        <a href="#">
-                            <i class="uil uil-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="uil uil-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="about">
-            <h2 class="section__heading">About Me</h2>
-            <div class="content">
+    <main class="container" id="resume">
+        <div>
+            <section class="profile" id="ripples">
                 <div class="left">
-                    <h3>I'm Prince Sharma</h3>
-                    <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, responsible and hard working person.</p>
-                    <button>Download CV</button>
+                    <div class="avatar">
+                        <img src="./images/128x128.jpg" alt="">
+                        <span><i class="uil uil-comment-dots"></i></span>
+                    </div>
+                    <div>
+                        <h2>Prince</h2>
+                        <p class="cd-headline loading-bar">
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">Web Developer</b>
+                                <b>React Developer</b>
+                                <b>PHP Developer</b>
+                            </span>
+                        </p>
+                    </div>
                 </div>
+            
                 <div class="right">
-                    <p>
-                        <span>Father's Name</span>
-                        <span>Pradeep Sharma</span>
-                    </p>
-                    <p>
-                        <span>Date of Birth</span>
-                        <span>16 june 2003</span>
-                    </p>
-                    <p>
-                        <span>Spoken Languages</span>
-                        <span>Hindi, English</span>
-                    </p>
-                    <p>
-                        <span>Nationality</span>
-                        <span>Indian</span>
-                    </p>
-                    <p>
-                        <span>Interests</span>
-                        <span>Chess, Anime, Programming</span>
-                    </p>
+                    <ul class="contact">
+                        <li>
+                            <i class="uil uil-phone-volume"></i>
+                            <strong>Phone : </strong> +91 99102 54105
+                        </li>
+                        <li>
+                            <i class="uil uil-envelope"></i>
+                            <strong>Email : </strong> vs3031999@gmail.com
+                        </li>
+                    </ul>
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="uil uil-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="uil uil-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2 class="section__heading">Education & Skills</h2>
-            <div class="content">
-                <div class="left">
-                    <div class="heading">
-                        <i class="uil uil-graduation-cap"></i>
-                        <h5>Education</h5>
+            </section>
+            
+            <section class="about">
+                <h2 class="section__heading">About Me</h2>
+                <div class="content">
+                    <div class="left">
+                        <h3>I'm Prince Sharma</h3>
+                        <p>I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, responsible and hard working person.</p>
+                        <button>Download CV</button>
                     </div>
-                    <div class="timeline__wrapper">
-                        <div class="item">
-                            <p class="center">Master of Computer Application</p>
-                            <p>HIMT affiliated with AKTU, Lakhnow</p>
-                            <p>2022 - 2024</p>
-                        </div>
-                        <div class="item">
-                            <p class="center">Bachelor of Computer Application</p>
-                            <p>HIMT affiliated with CCSU, Meerut</p>
-                            <p>2019 - 2022</p>
-                        </div>
-                        <div class="item">
-                            <p class="center">Intermediate</p>
-                            <p>SBS Inter College</p>
-                            <p>2019</p>
-                        </div>
-                        <div class="item">
-                            <p class="center">High School</p>
-                            <p>SBS Inter College</p>
-                            <p>2017</p>
-                        </div>
+                    <div class="right">
+                        <p>
+                            <span>Father's Name</span>
+                            <span>Pradeep Sharma</span>
+                        </p>
+                        <p>
+                            <span>Date of Birth</span>
+                            <span>16 june 2003</span>
+                        </p>
+                        <p>
+                            <span>Spoken Languages</span>
+                            <span>Hindi, English</span>
+                        </p>
+                        <p>
+                            <span>Nationality</span>
+                            <span>Indian</span>
+                        </p>
+                        <p>
+                            <span>Interests</span>
+                            <span>Chess, Anime, Programming</span>
+                        </p>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="skills_wrapper">
-                        <div class="skill-box">
-                            <h4>HTML & CSS</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="95" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
-                            </div>
+            </section>
+            
+            <section class="skills">
+                <h2 class="section__heading">Education & Skills</h2>
+                <div class="content">
+                    <div class="left">
+                        <div class="heading">
+                            <i class="uil uil-graduation-cap"></i>
+                            <h5>Education</h5>
                         </div>
-                        <div class="skill-box">
-                            <h4>JavaScript</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="75" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p class="center">Master of Computer Application</p>
+                                <p>HIMT affiliated with AKTU, Lakhnow</p>
+                                <p>2022 - 2024</p>
                             </div>
-                        </div>
-                        <div class="skill-box">
-                            <h4>PHP</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="70" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
+                            <div class="item">
+                                <p class="center">Bachelor of Computer Application</p>
+                                <p>HIMT affiliated with CCSU, Meerut</p>
+                                <p>2019 - 2022</p>
                             </div>
-                        </div>
-                        <div class="skill-box">
-                            <h4>React</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="65" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
+                            <div class="item">
+                                <p class="center">Intermediate</p>
+                                <p>SBS Inter College</p>
+                                <p>2019</p>
                             </div>
-                        </div>
-                        <div class="skill-box">
-                            <h4>MySQL</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="80" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="skill-box">
-                            <h4>Bootstrap / Tailwind</h4>
-                            <div class="progress__wrap">
-                                <span data-percent="85" class="progress__bar">
-                                    <div class="tooltip">95%</div>
-                                </span>
+                            <div class="item">
+                                <p class="center">High School</p>
+                                <p>SBS Inter College</p>
+                                <p>2017</p>
                             </div>
                         </div>
                     </div>
+                    <div class="right">
+                        <div class="skills_wrapper">
+                            <div class="skill-box">
+                                <h4>HTML & CSS</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="95" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>JavaScript</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="75" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>PHP</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="70" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>React</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="65" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>MySQL</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="80" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>Bootstrap / Tailwind</h4>
+                                <div class="progress__wrap">
+                                    <span data-percent="85" class="progress__bar">
+                                        <div class="tooltip">95%</div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <section class="work">
+                <h2 class="section__heading">My Works</h2>
+                <div class="wrapper">
+                    <div class="slider__wrapper">
+                        <div class="icon__wrap">
+                            <i class="uil uil-feedback"></i>
+                        </div>
+                        <div class="slider">
+                            <div class="slide">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam nesciunt consectetur porro aperiam, illum ducimus.</p>
+                                <div>
+                                    <img src="./images/200x200.jpg" alt="">
+                                </div>
+                                <h2>Michaek C. Rios</h2>
+                                <h6>Salesforce Engineer</h6>
+                            </div>
+                            <div class="slide">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam nesciunt consectetur porro aperiam, illum ducimus.</p>
+                                <div>
+                                    <img src="./images/200x200.jpg" alt="">
+                                </div>
+                                <h2>Michaek C. Rios</h2>
+                                <h6>Salesforce Engineer</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio">
+                        <div class="tabs">
+                            <ul>
+                                <li><a class="active" href="#" data-filter="*">All</a></li>
+                                <li><a href="#" data-filter=".frontend">Frontend</a></li>
+                                <li><a href="#" data-filter=".backend">Backend</a></li>
+                                <li><a href="#" data-filter=".fullstack">Fullstack</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio__wrapper">
+                            <div class="item frontend">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item frontend">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item backend">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item backend">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item fullstack">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item fullstack">
+                                <a class="magnific_popup" href="./images/200x200.jpg" title="projectname">
+                                    <img src="./images/200x200.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="contact">
+                <h2 class="section__heading">Contact Me</h2>
+                <div class="wrapper">
+                    <div class="left">
+                        <div>
+                            <div><i class="uil uil-phone-volume"></i></div>
+                            <div>
+                                <h4>Phone No.</h4>
+                                <span>+91 99102 54105</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div><i class="uil uil-envelope"></i></div>
+                            <div>
+                                <h4>Mail Me</h4>
+                                <span>vs3031999@gmail.com</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div><i class="uil uil-map-marker"></i></div>
+                            <div>
+                                <h4>Find Me</h4>
+                                <span>Lakhnawali, Gr. Noida, GB Nagar, UP - 201306</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <form action="">
+                            <div class="form-group">
+                                <div>
+                                    <label for="">Name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <label for="">Email</label>
+                                    <input type="email" name="" id="">
+                                </div>
+                            </div>
+                            <div class="form-group textarea__wrapper">
+                                <div>
+                                    <label for="">Message</label>
+                                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit">Send Now</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <footer class="container">
+        <span>&copy; 2023. All rights reserved</span>
+    </footer>
 
     <!-- JQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Slick Slider CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Headline Js -->
     <script src="./plugins/headlines/headline.js"></script>
     <!-- Ripples Js -->
     <script src="./plugins/ripples.js"></script>
+    <!-- Isotope Js -->
+    <script src="./plugins/isotope.js"></script>
+    <!-- Magnific Popup CSS -->
+    <script src="./plugins/magnific/magnific.js"></script>
     <!-- Custom Js -->
     <script src="./js/main.js"></script>
 </body>

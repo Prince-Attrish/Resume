@@ -28,7 +28,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     background: var(--dark);
     -webkit-font-smoothing: antialiased;
-    height: 1500px;
+    padding-bottom: 4rem;
 }
 
 h1,
@@ -42,7 +42,7 @@ h6 {
 }
 
 section {
-    padding: 3rem;
+    padding: 3rem 3rem 1rem;
 }
 
 main {
@@ -50,7 +50,7 @@ main {
 }
 
 .container {
-    max-width: 940px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -99,12 +99,18 @@ nav .inner .logo i {
 }
 
 nav .inner button {
-    background: var(--secondary);
+    background: var(--info);
     border: none;
     padding: 0.6rem 1rem;
     color: var(--pure);
     font-size: 14px;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+nav .inner button:hover {
+    background: var(--secondary);
 }
 
 /* ======= Profile ======= */
@@ -392,5 +398,284 @@ section.skills .skills_wrapper .skill-box .progress__wrap .progress__bar .toolti
     margin-bottom: 10px;
     color: var(--ternary);
     font-size: 16px;
+}
 
+/* ======= Works ======= */
+
+section.work .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 40px;
+}
+
+section.work .wrapper .portfolio .tabs ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.work .wrapper .portfolio .tabs ul li a {
+    color: var(--fade);
+    border-bottom: 1px solid transparent;
+    padding: 10px 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+section.work .wrapper .portfolio .tabs ul li a.active {
+    border-color: var(--info);
+    color: var(--info);
+    transition: all .3s ease-in-out;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper {
+    margin-top: 4rem;
+    display: flex;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper .item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.work .wrapper .slider__wrapper .icon__wrap {
+    color: var(--info);
+    font-size: 24px;
+    text-align: center;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide p {
+    color: var(--ternary);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide h2 {
+    font-size: 16px;
+    color: var(--info);
+    margin-top: 1rem;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide h6 {
+    color: var(--ternary);
+    margin-top: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    font-size: 12px;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.work .wrapper .slider__wrapper {
+    overflow: hidden;
+}
+
+/* ======= Contacts ======= */
+
+section.contact .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    margin-top: 40px;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+section.contact .wrapper .left>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+section.contact .wrapper .left>div div:nth-child(1) {
+    margin-right: 10px;
+}
+
+section.contact .wrapper .left i {
+    font-size: 30px;
+    color: var(--info);
+}
+
+section.contact .wrapper .left h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+section.contact .wrapper .left h4+span {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+section.contact .wrapper .left {
+    color: var(--ternary);
+}
+
+section.contact .wrapper .right .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+section.contact .wrapper .right .form-group>div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .wrapper .right .form-group>div label {
+    color: var(--ternary);
+    margin-bottom: 6px;
+}
+
+section.contact .wrapper .right .form-group>div input,
+section.contact .wrapper .right .form-group.textarea__wrapper textarea {
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid var(--dark-blue);
+    color: var(--ternary);
+    font-size: 16px;
+}
+
+section.contact .wrapper .right .form-group>div input:focus,
+section.contact .wrapper .right .form-group.textarea__wrapper textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+section.contact .wrapper .right .form-group.textarea__wrapper textarea {
+    resize: none;
+}
+
+section.contact .wrapper .right .form-group.textarea__wrapper {
+    display: block;
+    width: 100%;
+}
+
+section.contact .wrapper .right button {
+    background: var(--info);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: var(--pure);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+section.contact .wrapper .right button:hover {
+    background: var(--secondary);
+}
+
+/* ====== Footer ======= */
+
+footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 14px;
+    color: var(--ternary);
+}
+
+/* ======== Media Queries */
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 1024px) {
+    section.about .content {
+        grid-gap: 4rem;
+    }
+
+}
+
+@media (max-width: 848px) {
+    section.profile .right {
+        flex: 1.2;
+    }
+
+    section.about .content {
+        display: block;
+    }
+
+    section.about .content .right {
+        margin-top: 3rem;
+    }
+
+    section.work .wrapper {
+        display: block;
+    }
+
+    section.work .wrapper .slider__wrapper {
+        margin-bottom: 8rem;
+    }
+
+    section.contact {
+        margin-top: 4rem;
+    }
+
+    section.contact .wrapper {
+        display: block;
+    }
+
+    section.contact .wrapper .right {
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    section.profile {
+        display: block;
+        clip-path: none;
+    }
+
+    section.profile .right {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 654px) {
+    section.skills .content {
+        display: block;
+    }
+
+    section.skills .content .right {
+        margin-top: 5rem;
+    }
+
+    section.contact .wrapper .right .form-group {
+        display: block;
+    }
+
+    section.contact .wrapper .right .form-group > div {
+        margin-top: 14px;
+    }
 }
